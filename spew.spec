@@ -39,7 +39,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/gorge
 %{_bindir}/regorge
 %{_bindir}/spew
-%{_mandir}/man1/gorge.1.bz2
-%{_mandir}/man1/regorge.1.bz2
-%{_mandir}/man1/spew.1.bz2
+%{_mandir}/man1/gorge.1*
+%{_mandir}/man1/regorge.1*
+%{_mandir}/man1/spew.1*
 
