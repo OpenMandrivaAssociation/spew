@@ -10,6 +10,7 @@ Source0: ftp://ftp.berlios.de/pub/spew/%{version}/%{name}-%{version}.tar.bz2
 License: GPL
 Group:	 System/Kernel and hardware 
 Url: http://spew.berlios.de/
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: popt-devel 
 BuildRequires: ncurses-devel
 %description
