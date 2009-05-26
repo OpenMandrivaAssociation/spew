@@ -1,13 +1,14 @@
 %define name spew
-%define version 1.0.5
-%define release %mkrel 4
+%define version 1.0.7
+%define release %mkrel 1
 
 Summary: An I/O benchmark tool
 Name: %{name}
 Version: %{version}
 Release: %{release}
-Source0: ftp://ftp.berlios.de/pub/spew/%{version}/%{name}-%{version}.tar.bz2
-License: GPL
+Source0: ftp://ftp.berlios.de/pub/spew/%{version}/%{name}-%{version}.tgz
+Patch0: %{name}-1.0.7-fix-str-fmt.patch
+License: GPLv2
 Group:	 System/Kernel and hardware 
 Url: http://spew.berlios.de/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -21,17 +22,18 @@ high I/O loads to stress systems while verifying data integrity.
 
 %prep
 %setup -q
+%patch0 -p1 -b .strfmt
 
 %build
 %configure
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
