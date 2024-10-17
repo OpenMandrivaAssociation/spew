@@ -10,7 +10,7 @@ Source0: ftp://ftp.berlios.de/pub/spew/%{version}/%{name}-%{version}.tgz
 Patch0: %{name}-1.0.7-fix-str-fmt.patch
 License: GPLv2
 Group:	 System/Kernel and hardware 
-Url: http://spew.berlios.de/
+Url: https://spew.berlios.de/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: popt-devel 
 BuildRequires: ncurses-devel
