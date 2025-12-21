@@ -12,6 +12,11 @@ License: GPLv2
 Group:	 System/Kernel and hardware 
 Url: https://spew.berlios.de/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: popt-devel 
 BuildRequires: ncurses-devel
 %description
